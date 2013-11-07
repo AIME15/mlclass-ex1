@@ -14,7 +14,9 @@ J = 0;
 %               You should set J to the cost.
 
 
+%J = sum((theta(2) * X(:, end) + theta(1) - y) .^ 2) / (2 * m);
 
+J = 1 / (2 * m) * transpose((X * theta - y)) * (X * theta - y);
 
 
 % =========================================================================
