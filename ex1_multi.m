@@ -39,6 +39,9 @@ X = data(:, 1:2);
 y = data(:, 3);
 m = length(y);
 
+size(X)
+size(y)
+
 % Print out some data points
 fprintf('First 10 examples from the dataset: \n');
 fprintf(' x = [%.0f %.0f], y = %.0f \n', [X(1:10,:) y(1:10,:)]');
@@ -84,6 +87,8 @@ X = [ones(m, 1) X];
 % Hint: At prediction, make sure you do the same feature normalization.
 %
 
+
+
 fprintf('Running gradient descent ...\n');
 
 % Choose some alpha value
@@ -92,6 +97,8 @@ num_iters = 400;
 
 % Init Theta and Run Gradient Descent 
 theta = zeros(3, 1);
+
+
 
 [theta, J_history] = gradientDescentMulti(X, y, theta, alpha, num_iters);
 
